@@ -1,0 +1,52 @@
+# Requests for the VS Code REST Client / JetBrains HTTP client / Visual Studio.
+# Run the API first: dotnet run --project src/EventManagement.Api
+
+@baseUrl = http://localhost:5080/api
+@eventId = 00000000-0000-0000-0000-000000000000
+@registrationId = 00000000-0000-0000-0000-000000000000
+
+### List events (status: all | upcoming | past)
+GET {{baseUrl}}/events?status=upcoming
+
+### Get one event
+GET {{baseUrl}}/events/{{eventId}}
+
+### Create an event
+POST {{baseUrl}}/events
+Content-Type: application/json
+
+{
+  "title": "Team Offsite",
+  "description": "Planning for next quarter.",
+  "date": "2030-06-01T09:00:00Z",
+  "maxCapacity": 25
+}
+
+### Update an event (full replacement)
+PUT {{baseUrl}}/events/{{eventId}}
+Content-Type: application/json
+
+{
+  "title": "Team Offsite (updated)",
+  "description": "Now with lunch.",
+  "date": "2030-06-02T09:00:00Z",
+  "maxCapacity": 30
+}
+
+### Delete an event
+DELETE {{baseUrl}}/events/{{eventId}}
+
+### List registrations for an event
+GET {{baseUrl}}/events/{{eventId}}/registrations
+
+### Register an attendee
+POST {{baseUrl}}/events/{{eventId}}/registrations
+Content-Type: application/json
+
+{
+  "name": "Ada Lovelace",
+  "email": "ada@example.com"
+}
+
+### Unregister
+DELETE {{baseUrl}}/events/{{eventId}}/registrations/{{registrationId}}
