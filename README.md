@@ -1,6 +1,6 @@
 # Eventful — Event Management
 
-[![CI](https://github.com/vishalgupta1998/event-management/actions/workflows/ci.yml/badge.svg)](https://github.com/vishalgupta1998/event-management/actions/workflows/ci.yml)
+[![CI](https://github.com/vishalgupta2446/event-management/actions/workflows/ci.yml/badge.svg)](https://github.com/vishalgupta2446/event-management/actions/workflows/ci.yml)
 ![.NET 10](https://img.shields.io/badge/.NET-10-512BD4?logo=dotnet&logoColor=white)
 ![React 19](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
